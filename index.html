@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Automobilių duomenų lentelė</h1>
+      <button id="new" class="glow-on-hover">Naujas įrašas</button>
+      <div id="error"></div>
+      <div id="modal">
+        <h3>Pridėkite duomenis:</h3>
+        <div class="forma">
+          <input type="date" placeholder="Data" class="tableInput" id="data" />
+          <input
+            type="text"
+            placeholder="Numeris"
+            class="tableInput"
+            id="numeris"
+          />
+          <input
+            type="number"
+            placeholder="Kelias, m"
+            class="tableInput"
+            id="kelias"
+          />
+          <input
+            type="number"
+            placeholder="Laikas, s"
+            class="tableInput"
+            id="laikas"
+          />
+          <button id="button" class="glow-on-hover" onclick="fillTable()">
+            Saugoti
+          </button>
+          <button id="close" class="glow-on-hover">Uzdaryti</button>
+        </div>
+      </div>
+      <div id="modal2">
+        <h3>Keiskite duomenis:</h3>
+        <div class="forma">
+          <input
+            type="date"
+            placeholder="MM/DD/YY"
+            class="tableInput"
+            id="data2"
+          />
+          <input
+            type="text"
+            placeholder="Numeris"
+            class="tableInput"
+            id="numeris2"
+          />
+          <input
+            type="number"
+            placeholder="Kelias, m"
+            class="tableInput"
+            id="kelias2"
+          />
+          <input
+            type="number"
+            placeholder="Laikas, s"
+            class="tableInput"
+            id="laikas2"
+          />
+          <button id="realedit" class="glow-on-hover">Patvirtinti</button>
+          <button id="close2" class="glow-on-hover">Uždaryti</button>
+        </div>
+      </div>
+      <div id="modal3">
+        <button id="yes" class="glow-on-hover">Taip</button>
+        <button id="no" class="glow-on-hover">Ne</button>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Numeris</th>
+            <th>Kelias, m</th>
+            <th>Laikas, s</th>
+            <th>Greitis, km/h</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

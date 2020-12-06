@@ -1,0 +1,260 @@
+body {
+  font-family: "Roboto Mono", monospace;
+}
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(73, 77, 95, 0.8);
+  padding-bottom: 1rem;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+}
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-style: italic;
+  font-size: 50px;
+}
+#new {
+  border-radius: 10px;
+  margin-top: 1rem;
+  width: 140px;
+  outline: none;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  height: 50px;
+  border: none;
+  color: rgb(119, 120, 185);
+}
+.delete,
+.edit,
+#close,
+#close2,
+#realedit {
+  border-radius: 10px;
+  margin-top: 1rem;
+  width: 95px;
+  outline: none;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  height: 30px;
+  color: rgb(119, 120, 185);
+}
+#error {
+  text-align: center;
+  color: red;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 22px;
+}
+::placeholder {
+  padding-left: 10px;
+  color: rgb(20, 20, 20, 0.5);
+  font-style: italic;
+}
+.forma {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 60%;
+  margin: 0 auto;
+}
+.tableInput {
+  height: 35px;
+  width: 170px;
+  margin-top: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 15px;
+}
+
+#button {
+  display: inline-block;
+  border-radius: 10px;
+  width: 95px;
+  outline: none;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  height: 33px;
+  margin-top: 1rem;
+  color: rgb(119, 120, 185);
+  border: none;
+}
+.delete,
+.edit,
+#realedit,
+#close,
+#close2,
+#button,
+#new {
+  background-color: rgba(208, 189, 244, 0.8);
+  border: none;
+  color: #fff;
+  font-style: italic;
+}
+.delete:hover,
+.edit:hover,
+#realedit:hover,
+#close:hover,
+#close2:hover,
+#button:hover,
+#new:hover {
+  transform: scale(1.1);
+}
+table {
+  width: 60%;
+  margin: 0 auto 1.5rem;
+}
+th {
+  font-weight: 700;
+  font-size: 20px;
+  font-style: italic;
+  color: black;
+}
+th,
+td {
+  width: 150px;
+  height: 65px;
+  text-align: left;
+}
+td {
+  border-top: 1px solid white;
+  font-size: 18px;
+  border-bottom: 1px solid white;
+}
+tr {
+  border-top: 1px solid red;
+}
+h3 {
+  text-align: center;
+}
+#modal {
+  position: absolute;
+  background-color: rgba(160, 210, 235, 0.8);
+  box-shadow: 15px 15px 40px rgba(33, 98, 131, 0.8);
+
+  top: 20px;
+  width: 270px;
+  border-radius: 20px;
+  top: -100%;
+  left: 1%;
+  height: 400px;
+  transition: all ease 2s;
+}
+#modal2 {
+  position: absolute;
+  top: 20px;
+  right: 1%;
+  top: -100%;
+  background-color: rgba(160, 210, 235, 0.8);
+  box-shadow: 15px 15px 40px rgba(33, 98, 131, 0.8);
+
+  border-radius: 20px;
+  height: 400px;
+  width: 270px;
+  transition: all ease 2s;
+}
+#modal3 {
+  width: 300px;
+  height: 60px;
+  background-color: rgba(160, 210, 235, 0.8);
+  box-shadow: 15px 15px 40px rgba(33, 98, 131, 0.8);
+  border-radius: 20px;
+  position: absolute;
+  top: -100%;
+  right: 5%;
+  transition: all ease 1.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glow-on-hover {
+  width: 130px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: rgba(208, 189, 244, 0.8);
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20%;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+.edit,
+.delete {
+  margin-left: 1rem;
+  color: #fff;
+
+  margin-bottom: 1rem;
+}
