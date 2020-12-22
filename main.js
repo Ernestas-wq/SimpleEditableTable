@@ -7,7 +7,7 @@ var realEdit = document.getElementById('realEdit');
 var close = document.getElementById('close');
 var close2 = document.getElementById('close2');
 
-//Darom Yes no delete mygtukui
+//Darom Yes no delete mygtukui #
 
 var buttonYes = document.getElementById('yes');
 var buttonNo = document.getElementById('no');
